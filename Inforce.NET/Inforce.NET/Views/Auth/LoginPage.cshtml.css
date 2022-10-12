@@ -1,0 +1,9 @@
+﻿
+.user-not-found {
+    margin-bottom: 5px;
+}
+
+.user-not-found > span{
+    color: red;
+    margin-bottom: 10px;
+}

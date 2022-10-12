@@ -1,5 +1,6 @@
 ﻿using Inforce.NET.BLL;
 using Inforce.NET.BLL.MappingProfiles;
+using Inforce.NET.BLL.Services;
 using Inforce.NET.DAL;
 using Inforce.NET.Middlewares;
 using Microsoft.EntityFrameworkCore;
@@ -16,6 +17,7 @@ namespace Inforce.NET
                 .ConfigureJwt();
 
             services.AddTransient<TestService>();
+            services.AddTransient<AuthService>();
         }
 
         public static void RegisterMiddlewares(this WebApplication app)

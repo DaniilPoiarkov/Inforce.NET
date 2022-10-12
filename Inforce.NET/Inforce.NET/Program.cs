@@ -8,7 +8,7 @@ builder.Services.RegisterServices(builder.Configuration);
 
 var app = builder.Build();
 
-app.RegisterMiddlewares();
+//app.RegisterMiddlewares();
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
@@ -27,6 +27,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Auth}/{action=LoginPage}");
 
 app.Run();

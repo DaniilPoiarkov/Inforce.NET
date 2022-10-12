@@ -1,0 +1,24 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<form method="post">
+    <p>
+        <label>Login:</label><br />
+        <input type="text" name="credentials.Login" />
+    </p>
+    <p>
+        <label>Password:</label><br />
+        <input type="password" name="credentials.Password" />
+    </p>
+    @if (ViewBag.Error == true)
+    {
+        <div class="user-not-found">
+            <span>User with given credentials not found</span>
+        </div>
+    }
+    <p>
+        <input type="submit" value="Send" />
+    </p>
+</form>

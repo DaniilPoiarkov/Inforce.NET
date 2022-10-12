@@ -1,19 +1,27 @@
-/* _content/Inforce.NET/Views/Home/User.cshtml.rz.scp.css */
-@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+/* _content/Inforce.NET/Views/Auth/LoginPage.cshtml.rz.scp.css */
 
-.container{
+.user-not-found[b-cwqihzgi1g] {
+    margin-bottom: 5px;
+}
+
+.user-not-found > span[b-cwqihzgi1g]{
+    color: red;
+    margin-bottom: 10px;
+}
+/* _content/Inforce.NET/Views/Home/UserList.cshtml.rz.scp.css */
+
+
+.container[b-d0p6rp0j9t]{
     display: flex;
     flex-direction: column;
 }
 
-.user[b-kffgdylyo0]{
+.user[b-d0p6rp0j9t]{
     display: flex;
     flex-direction: row;
 }
 
-.user > span[b-kffgdylyo0] {
+.user > span[b-d0p6rp0j9t] {
     margin: 5px 5px 5px 5px;
 }
 /* _content/Inforce.NET/Views/Shared/_Layout.cshtml.rz.scp.css */
