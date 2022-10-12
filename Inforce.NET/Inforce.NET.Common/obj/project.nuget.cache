@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "7qUGDK7Zlyu4Hm2uHAIGUzDOkCuDtRMK/J0/WSBROMcuVjAJxNJk3Lm/lA0guww3/iyXw9YjjJc8ZIJcjfoLgg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\$Hp\\source\\repos\\Inforce.NET\\Inforce.NET\\Inforce.NET.Common\\Inforce.NET.Common.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\$Hp\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
+    "C:\\Users\\$Hp\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512"
+  ],
+  "logs": []
+}
