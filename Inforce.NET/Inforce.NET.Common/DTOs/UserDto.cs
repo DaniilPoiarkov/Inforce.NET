@@ -1,4 +1,5 @@
-﻿using Inforce.NET.Common.Enums;
+﻿using Inforce.NET.Common.Entities;
+using Inforce.NET.Common.Enums;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,5 +19,7 @@ namespace Inforce.NET.Common.DTOs
         public UserRole Role { get; set; }
 
         public string FullName { get; set; } = null!;
+
+        public List<ShortedUrlDto> OwnedUrls { get; set; } = new();
     }
 }
