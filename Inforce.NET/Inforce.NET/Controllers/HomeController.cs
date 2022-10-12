@@ -1,4 +1,5 @@
-﻿using Inforce.NET.Models;
+﻿using Inforce.NET.BLL;
+using Inforce.NET.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
@@ -6,11 +7,11 @@ namespace Inforce.NET.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly TestService _service;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(TestService service)
         {
-            _logger = logger;
+            _service = service;
         }
 
         public IActionResult Index()
@@ -20,6 +21,12 @@ namespace Inforce.NET.Controllers
 
         public IActionResult Privacy()
         {
+            return View();
+        }
+
+        public new IActionResult User()
+        {
+            ViewBag.User = _service.GetTestPlural();
             return View();
         }
 

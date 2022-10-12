@@ -4,9 +4,11 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-builder.Services.RegisterServices();
+builder.Services.RegisterServices(builder.Configuration);
 
 var app = builder.Build();
+
+app.RegisterMiddlewares();
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())

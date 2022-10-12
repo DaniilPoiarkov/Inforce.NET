@@ -1,3 +1,21 @@
+/* _content/Inforce.NET/Views/Home/User.cshtml.rz.scp.css */
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
+.user[b-kffgdylyo0]{
+    display: flex;
+    flex-direction: row;
+}
+
+.user > span[b-kffgdylyo0] {
+    margin: 5px 5px 5px 5px;
+}
 /* _content/Inforce.NET/Views/Shared/_Layout.cshtml.rz.scp.css */
 /* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */

@@ -10,8 +10,10 @@ namespace Inforce.NET.Common.Entities
     public class ShortedUrl
     {
         public int Id { get; set; }
-        
-        public string? URL { get ; set; }
+
+        public string URL { get; set; } = null!;
+
+        public string ShortdUrl { get; set; } = null!;
 
         public DateTime CreatedDate { get; set; }
 

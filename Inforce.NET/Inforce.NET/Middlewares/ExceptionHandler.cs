@@ -29,7 +29,7 @@ namespace Inforce.NET.Middlewares
             }
         }
 
-        private async Task HandleException(HttpContext context, HttpStatusCode status, object? errorBody)
+        private async Task HandleException(HttpContext context, HttpStatusCode status, object errorBody)
         {
             errorBody ??= new { Error = "Unknown error occured" };
             context.Response.ContentType = "application/json";

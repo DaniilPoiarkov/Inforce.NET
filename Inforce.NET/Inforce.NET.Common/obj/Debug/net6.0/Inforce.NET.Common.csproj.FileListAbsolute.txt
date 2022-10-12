@@ -1,0 +1,14 @@
+C:\Users\$Hp\source\repos\Inforce.NET\Inforce.NET\Inforce.NET.Common\bin\Debug\net6.0\Inforce.NET.Common.deps.json
+C:\Users\$Hp\source\repos\Inforce.NET\Inforce.NET\Inforce.NET.Common\bin\Debug\net6.0\Inforce.NET.Common.dll
+C:\Users\$Hp\source\repos\Inforce.NET\Inforce.NET\Inforce.NET.Common\bin\Debug\net6.0\Inforce.NET.Common.pdb
+C:\Users\$Hp\source\repos\Inforce.NET\Inforce.NET\Inforce.NET.Common\obj\Debug\net6.0\Inforce.NET.Common.csproj.AssemblyReference.cache
+C:\Users\$Hp\source\repos\Inforce.NET\Inforce.NET\Inforce.NET.Common\obj\Debug\net6.0\Inforce.NET.Common.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\$Hp\source\repos\Inforce.NET\Inforce.NET\Inforce.NET.Common\obj\Debug\net6.0\Inforce.NET.Common.AssemblyInfoInputs.cache
+C:\Users\$Hp\source\repos\Inforce.NET\Inforce.NET\Inforce.NET.Common\obj\Debug\net6.0\Inforce.NET.Common.AssemblyInfo.cs
+C:\Users\$Hp\source\repos\Inforce.NET\Inforce.NET\Inforce.NET.Common\obj\Debug\net6.0\Inforce.NET.Common.csproj.CoreCompileInputs.cache
+C:\Users\$Hp\source\repos\Inforce.NET\Inforce.NET\Inforce.NET.Common\obj\Debug\net6.0\Inforce.NET.Common.dll
+C:\Users\$Hp\source\repos\Inforce.NET\Inforce.NET\Inforce.NET.Common\obj\Debug\net6.0\refint\Inforce.NET.Common.dll
+C:\Users\$Hp\source\repos\Inforce.NET\Inforce.NET\Inforce.NET.Common\obj\Debug\net6.0\Inforce.NET.Common.pdb
+C:\Users\$Hp\source\repos\Inforce.NET\Inforce.NET\Inforce.NET.Common\obj\Debug\net6.0\ref\Inforce.NET.Common.dll
+C:\Users\$Hp\source\repos\Inforce.NET\Inforce.NET\Inforce.NET.Common\bin\Debug\net6.0\Inforce.NET.Common.runtimeconfig.json
+C:\Users\$Hp\source\repos\Inforce.NET\Inforce.NET\Inforce.NET.Common\obj\Debug\net6.0\Inforce.NET.Common.genruntimeconfig.cache
