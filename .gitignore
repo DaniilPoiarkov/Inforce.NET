@@ -1,4 +1,10 @@
 Inforce.NET/.vs
-Inforce.NET/obj
 Inforce.NET/bin
-.vs
+Inforce.NET/obj
+Inforce.NET/Inforce.NET.BLL/obj
+Inforce.NET/Inforce.NET.BLL/bin
+Inforce.NET/Inforce.NET.Common/obj
+Inforce.NET/Inforce.NET.Common/bin
+Inforce.NET/Inforce.NET.DAL/bin
+Inforce.NET/Inforce.NET.DAL/obj
+Inforce.NET_Frontend/.vscode
