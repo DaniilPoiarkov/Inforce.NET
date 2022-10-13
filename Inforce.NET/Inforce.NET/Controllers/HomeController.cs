@@ -9,30 +9,40 @@ namespace Inforce.NET.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly TestService _service;
+        private readonly UserService _service;
         private readonly AuthService _authService;
 
-        public HomeController(TestService service, AuthService authService)
+        public HomeController(UserService service, AuthService authService)
         {
             _service = service;
             _authService = authService;
         }
 
-        public IActionResult Index(int? id = null)
+        public async Task<IActionResult> Index(int? id = null)
         {
             ViewBag.Id = id;
+
+            if(id != null)
+            {
+                var user = await _service.GetUserById((int)id);
+                ViewBag.Name = user.FullName;
+                ViewBag.User = user;
+            }
+
             return View();
         }
 
-        public IActionResult About(int? id = null)
+        public async Task<IActionResult> About(int? id = null)
         {
             ViewBag.Id = id;
-            return View();
-        }
 
-        public IActionResult UserList()
-        {
-            ViewBag.User = _service.GetTestPlural();
+            if (id != null)
+            {
+                var user = await _service.GetUserById((int)id);
+                ViewBag.Name = user.FullName;
+                ViewBag.User = user;
+            }
+
             return View();
         }
 

@@ -22,7 +22,6 @@ namespace Inforce.NET
                 .ConfigureJwt(configuration);
 
             services
-                .AddTransient<TestService>()
                 .AddTransient<AuthService>()
                 .AddTransient<UserService>();
         }

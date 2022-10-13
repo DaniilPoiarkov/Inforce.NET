@@ -14,22 +14,6 @@
     color: red;
     margin-bottom: 10px;
 }
-/* _content/Inforce.NET/Views/Home/UserList.cshtml.rz.scp.css */
-
-
-.container[b-d0p6rp0j9t]{
-    display: flex;
-    flex-direction: column;
-}
-
-.user[b-d0p6rp0j9t]{
-    display: flex;
-    flex-direction: row;
-}
-
-.user > span[b-d0p6rp0j9t] {
-    margin: 5px 5px 5px 5px;
-}
 /* _content/Inforce.NET/Views/Shared/_Layout.cshtml.rz.scp.css */
 /* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
