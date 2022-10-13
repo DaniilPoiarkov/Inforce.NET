@@ -39,4 +39,8 @@ export class HttpService {
   public getUrlById(urlId: number): Observable<HttpResponse<ShortedUrl>> {
     return this.http.get<ShortedUrl>(this.url + '/url/' + urlId, { observe: 'response', headers: this.headers });
   }
+
+  public deleteLink(id: number): Observable<HttpResponse<void>> {
+    return this.http.delete<void>(this.url + '/deleteLink/' + id, { observe: 'response', headers: this.headers, })
+  }
 }

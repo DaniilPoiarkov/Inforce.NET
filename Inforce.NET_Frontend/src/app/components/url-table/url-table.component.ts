@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { NewUrl } from 'src/app/models/create-new-url';
 import { ShortedUrl } from 'src/app/models/shortedUrl';
 import { UserModel } from 'src/app/models/user';
 import { HttpService } from 'src/app/services/http.service';
+import { NotificationService } from 'src/app/services/notification.service';
 import { environment } from 'src/environments/environment';
 
 @Component({
@@ -16,6 +17,8 @@ export class UrlTableComponent implements OnInit {
   constructor(
     private httpService: HttpService,
     private route: ActivatedRoute,
+    private router: Router,
+    private notificationService: NotificationService
   ) { }
 
   public user?: UserModel;
@@ -39,7 +42,11 @@ export class UrlTableComponent implements OnInit {
       createdById: this.user?.id as number 
     }
     this.httpService.saveNewUrl(model).subscribe((resp) => {
-      this.shortedUrls.push(resp.body as ShortedUrl)
+      this.shortedUrls.push(resp.body as ShortedUrl);
+      this.router.navigate(['details/'+ resp.body?.id ]);
+      this.notificationService.success('Link shortened successfully');
+    }, (err) => {
+      this.notificationService.error(err.error);
     });
   }
 }

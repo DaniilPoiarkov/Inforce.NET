@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { ShortedUrl } from 'src/app/models/shortedUrl';
 import { UserModel } from 'src/app/models/user';
 import { HttpService } from 'src/app/services/http.service';
+import { NotificationService } from 'src/app/services/notification.service';
 
 @Component({
   selector: 'app-url-details-page',
@@ -13,7 +14,7 @@ export class UrlDetailsPageComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private router: Router,
+    private notificationService: NotificationService,
     private httpService: HttpService,
   ) { }
 
@@ -27,7 +28,7 @@ export class UrlDetailsPageComponent implements OnInit {
         this.shortedUrl = resp.body as ShortedUrl;
         this.getUser(this.shortedUrl.createdById)
     }, (err) => {
-      console.log(err);
+      this.notificationService.error(err.error);
     });
   }
 
@@ -36,7 +37,7 @@ export class UrlDetailsPageComponent implements OnInit {
       .subscribe((resp) => {
         this.user = resp.body as UserModel;
     }, (err) => {
-      console.log(err);
+      this.notificationService.error(err.error);
     });
   }
 
@@ -46,5 +47,15 @@ export class UrlDetailsPageComponent implements OnInit {
     } else {
       window.location.href = this.shortedUrl.shortUrl;
     }
+  }
+
+  deleteLink(): void {
+    this.httpService.deleteLink(this.shortedUrl.id).subscribe((resp) => {
+      if(resp.ok){
+        this.notificationService.success('Link deleted successfully');
+      }
+    }, (err) => {
+      this.notificationService.error(err.error);
+    });
   }
 }
