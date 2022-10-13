@@ -19,7 +19,6 @@ export class UrlViewComponent implements OnInit {
   }
 
   openDetails(): void {
-    console.log('Clicked');
     this.router.navigate(['details/' + this.url.id]);
   }
 

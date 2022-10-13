@@ -41,13 +41,15 @@ namespace Inforce.NET.BLL.Services
 
         public async Task<ShortedUrlDto> CreateShortedUrl(NewUrl model)
         {
-            await ValidateModel(model);
-            var entity = _mapper.Map<ShortedUrl>(model);
+            var validModel = await ValidateModel(model);
+
+            var entity = _mapper.Map<ShortedUrl>(validModel);
 
             entity.CreatedDate = DateTime.UtcNow;
-            entity.ShortUrl = ShortenUrl(model.URL?? string.Empty);
+            entity.ShortUrl = ShortenUrl(validModel.URL);
 
             await _dbContext.ShortedUrls.AddAsync(entity);
+            await _dbContext.SaveChangesAsync();
 
             return _mapper.Map<ShortedUrlDto>(entity);
         }
@@ -75,24 +77,21 @@ namespace Inforce.NET.BLL.Services
             return shortedUrl;
         }
 
-        private async Task ValidateModel(NewUrl model)
+        private async Task<NewUrl> ValidateModel(NewUrl model)
         {
             if(string.IsNullOrEmpty(model.URL))
                 throw new InvalidValuesException("Invalid Url");
 
-            var userExistTask = _dbContext.Users.AnyAsync(u => u.Id == model.CreatedById);
-            var userHasTask = _dbContext.ShortedUrls.AnyAsync(u => u.URL == model.URL && u.CreatedById == model.CreatedById);
-
-            await Task.WhenAll(userExistTask, userHasTask);
-
-            var isExist = await userExistTask;
-            var userHas = await userHasTask;
+            var isExist = await _dbContext.Users.AnyAsync(u => u.Id == model.CreatedById);
+            var userHas = await _dbContext.ShortedUrls.AnyAsync(u => u.URL == model.URL && u.CreatedById == model.CreatedById);
 
             if (!isExist)
                 throw new InvalidValuesException("User with given Id not found");
 
             if(userHas)
                 throw new InvalidValuesException("This link is already exist");
+
+            return model;
         }
     }
 }

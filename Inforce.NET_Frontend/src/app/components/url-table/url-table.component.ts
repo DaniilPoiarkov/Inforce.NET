@@ -28,33 +28,17 @@ export class UrlTableComponent implements OnInit {
       .subscribe((resp) => {
         this.user = resp.body as UserModel;
         this.shortedUrls = this.user.ownedUrls;
-        this.shortedUrls.push({
-          id: 1,
-          url: 'qwerty',
-          shortUrl: 'qwe',
-          createdDate: new Date(),
-          createdBy: this.user
-        });
-        this.shortedUrls.push({
-          id: 2,
-          url: 'asdfgh',
-          shortUrl: 'asd',
-          createdDate: new Date(),
-          createdBy: this.user
-        });
       }, () => {
         window.location.href = environment.apiUrl + '/Auth/LoginPage?isError=true';
       });
   }
 
   addUrl(): void {
-    console.log('Add url ' + this.inputUrl);
     const model: NewUrl = {
       url: this.inputUrl, 
       createdById: this.user?.id as number 
     }
     this.httpService.saveNewUrl(model).subscribe((resp) => {
-      console.log(resp.body);
       this.shortedUrls.push(resp.body as ShortedUrl)
     });
   }

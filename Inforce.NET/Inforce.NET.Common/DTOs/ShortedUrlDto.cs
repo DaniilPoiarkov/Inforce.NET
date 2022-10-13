@@ -17,8 +17,6 @@ namespace Inforce.NET.Common.DTOs
 
         public DateTime CreatedDate { get; set; }
 
-        public User? CreatedBy { get; set; }
-
         public int CreatedById { get; set; }
     }
 }

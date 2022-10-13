@@ -8,7 +8,7 @@ namespace Inforce.NET.BLL.Services
 {
     public class UrlShortenerService
     {
-        public static readonly string Chars = "abcdefghijklmnopqrstuvwxyz0123456789";
+        public static readonly string Chars = "abcdefghijklmnopqrstuvwxyz0123456789./%&?!@#=:ABCDEFGHIJKLMNOPQRSTUVWXYZ";
         public static readonly int Base = Chars.Length;
 
         public static string GenerateShortUrl(int i)

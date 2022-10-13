@@ -5,5 +5,5 @@ export interface ShortedUrl {
     url: string,
     shortUrl: string,
     createdDate: Date,
-    createdBy: UserModel
+    createdById: number
 }
