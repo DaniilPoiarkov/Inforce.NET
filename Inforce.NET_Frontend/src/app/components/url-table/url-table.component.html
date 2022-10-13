@@ -1,4 +1,4 @@
-<p>url-table works! {{ id }}</p>
+<p>Hello, {{ user?.fullName ?? "Anon" }}!</p>
 <div *ngIf="shortedUrls">
     <div *ngFor="let url of shortedUrls">
         <span>{{ url.shortedUrl }}</span>

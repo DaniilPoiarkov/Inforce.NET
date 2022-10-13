@@ -16,6 +16,7 @@ namespace Inforce.NET
         public static void RegisterServices(this IServiceCollection services, IConfiguration configuration)
         {
             services
+                .AddCors()
                 .RegisterMappingProfiles()
                 .ConnectDatabase(configuration)
                 .ConfigureJwt(configuration);

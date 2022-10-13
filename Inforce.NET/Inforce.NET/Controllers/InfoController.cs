@@ -16,14 +16,14 @@ namespace Inforce.NET.Controllers
             _service = service;
         }
 
-        [HttpGet]
+        [HttpGet("user/{id}")]
         public async Task<IActionResult> GetUserById(int id)
         {
             var user = await _service.GetUserById(id);
             return Ok(user);
         }
 
-        [HttpGet]
+        [HttpGet("urls/{userId}")]
         public async Task<IActionResult> GetUrlsByUserId(int userId)
         {
             var urls = await _service.GetUrlsByUserId(userId);

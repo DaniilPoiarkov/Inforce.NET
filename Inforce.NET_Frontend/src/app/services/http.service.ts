@@ -13,17 +13,21 @@ export class HttpService {
   private url = environment.apiUrl + '/api/info';
   private headers = new HttpHeaders();
 
+  public getHeaders(): HttpHeaders {
+    return this.headers;
+  }
+
   constructor(
     private http: HttpClient
   ) { }
 
   public getUserShortedUrls(userId: number): Observable<HttpResponse<ShortedUrl[]>> {
     return this.http.get<ShortedUrl[]>
-      (this.url + `?userId=${userId}`, { observe: 'response', headers: this.headers });
+      (this.url + `/urls/${userId}`, { observe: 'response', headers: this.getHeaders() });
   }
 
   public getUserById(userId: number): Observable<HttpResponse<UserModel>> {
     return this.http.get<UserModel>
-      (this.url + `?id=${userId}`, {observe: 'response', headers: this.headers });
+      (this.url + `/user/${userId}`, {observe: 'response', headers: this.getHeaders() });
   } 
 }

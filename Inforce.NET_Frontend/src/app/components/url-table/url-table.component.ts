@@ -16,7 +16,7 @@ export class UrlTableComponent implements OnInit {
     private route: ActivatedRoute
   ) { }
 
-  private user?: UserModel;
+  public user?: UserModel;
   public shortedUrls?: ShortedUrl[];
   public id: number = 0;
 

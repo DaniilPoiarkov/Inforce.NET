@@ -18,12 +18,25 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
+app.UseCors(opt =>
+{
+    opt
+    .AllowAnyHeader()
+    .AllowAnyMethod()
+    .AllowAnyOrigin();
+});
+
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
 
 app.UseAuthorization();
+
+app.UseEndpoints(endpoints => 
+{
+    endpoints.MapControllers();
+});
 
 app.MapControllerRoute(
     name: "default",
