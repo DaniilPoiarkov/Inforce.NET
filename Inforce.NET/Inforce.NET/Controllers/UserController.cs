@@ -1,5 +1,7 @@
 ﻿using Inforce.NET.BLL;
 using Inforce.NET.BLL.Services;
+using Inforce.NET.Common.AuxiliaryModels;
+using Inforce.NET.Common.DTOs;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -28,6 +30,20 @@ namespace Inforce.NET.Controllers
         {
             var urls = await _service.GetUrlsByUserId(userId);
             return Ok(urls);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> CreateNewShortedUrl(NewUrl model)
+        {
+            var url = await _service.CreateShortedUrl(model);
+            return Ok(url);
+        }
+
+        [HttpGet("tiny/{tinyUrl}")]
+        public async Task<IActionResult> GetLinkByTinyUrl(string tinyUrl)
+        {
+            var url = await _service.GetLinkByTinyUrl(tinyUrl);
+            return Ok(url);
         }
     }
 }

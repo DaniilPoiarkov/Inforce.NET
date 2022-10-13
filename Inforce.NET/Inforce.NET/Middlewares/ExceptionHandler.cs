@@ -23,6 +23,7 @@ namespace Inforce.NET.Middlewares
             {
                 var status = ex switch
                 {
+                    InvalidValuesException => HttpStatusCode.BadRequest,
                     NotFoundException => HttpStatusCode.NotFound,
                     _ => HttpStatusCode.InternalServerError
                 };

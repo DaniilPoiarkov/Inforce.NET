@@ -3,7 +3,7 @@ import { UserModel } from "./user";
 export interface ShortedUrl {
     id: number,
     url: string,
-    shortedUrl: string,
+    shortUrl: string,
     createdDate: Date,
     createdBy: UserModel
 }

@@ -8,20 +8,7 @@ import { ShortedUrl } from 'src/app/models/shortedUrl';
 })
 export class UrlViewComponent implements OnInit {
 
-  @Input() url: ShortedUrl = {
-    id: 0,
-    shortedUrl: '',
-    url: '',
-    createdBy: {
-      id: 0,
-      fullName: '',
-      login: '',
-      password: '',
-      role: 0,
-      ownedUrls: [],
-    },
-    createdDate: new Date(),
-  };
+  @Input() url: ShortedUrl;
 
   constructor() { }
 

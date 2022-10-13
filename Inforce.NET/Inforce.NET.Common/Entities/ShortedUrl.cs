@@ -13,7 +13,7 @@ namespace Inforce.NET.Common.Entities
 
         public string URL { get; set; } = null!;
 
-        public string ShortdUrl { get; set; } = null!;
+        public string ShortUrl { get; set; } = null!;
 
         public DateTime CreatedDate { get; set; }
 

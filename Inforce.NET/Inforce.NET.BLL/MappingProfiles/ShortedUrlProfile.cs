@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Inforce.NET.Common.AuxiliaryModels;
 using Inforce.NET.Common.DTOs;
 using Inforce.NET.Common.Entities;
 
@@ -8,7 +9,8 @@ namespace Inforce.NET.BLL.MappingProfiles
     {
         public ShortedUrlProfile()
         {
-            CreateMap<ShortedUrl, ShortedUrlDto>();
+            CreateMap<ShortedUrl, ShortedUrlDto>().ReverseMap();
+            CreateMap<NewUrl, ShortedUrl>();
         }
     }
 }

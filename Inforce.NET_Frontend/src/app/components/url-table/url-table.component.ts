@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { NewUrl } from 'src/app/models/create-new-url';
 import { ShortedUrl } from 'src/app/models/shortedUrl';
 import { UserModel } from 'src/app/models/user';
 import { HttpService } from 'src/app/services/http.service';
@@ -30,14 +31,14 @@ export class UrlTableComponent implements OnInit {
         this.shortedUrls.push({
           id: 1,
           url: 'qwerty',
-          shortedUrl: 'qwe',
+          shortUrl: 'qwe',
           createdDate: new Date(),
           createdBy: this.user
         });
         this.shortedUrls.push({
           id: 2,
           url: 'asdfgh',
-          shortedUrl: 'asd',
+          shortUrl: 'asd',
           createdDate: new Date(),
           createdBy: this.user
         });
@@ -48,5 +49,13 @@ export class UrlTableComponent implements OnInit {
 
   addUrl(): void {
     console.log('Add url ' + this.inputUrl);
+    const model: NewUrl = {
+      url: this.inputUrl, 
+      createdById: this.user?.id as number 
+    }
+    this.httpService.saveNewUrl(model).subscribe((resp) => {
+      console.log(resp.body);
+      this.shortedUrls.push(resp.body as ShortedUrl)
+    });
   }
 }
