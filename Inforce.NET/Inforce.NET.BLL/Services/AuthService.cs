@@ -26,13 +26,8 @@ namespace Inforce.NET.BLL.Services
 
         public async Task<UserDto> Login(UserLogin credentials)
         {
-            var user = _mapper.Map<UserDto>(await _dbContext.Users
+            return _mapper.Map<UserDto>(await _dbContext.Users
                 .FirstOrDefaultAsync(u => u.Login == credentials.Login && u.Password == credentials.Password));
-
-            //if (user == null)
-            //    throw new NotFoundException(nameof(User));
-
-            return user;
         }
     }
 }

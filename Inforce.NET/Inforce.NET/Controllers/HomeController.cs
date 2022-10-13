@@ -18,8 +18,9 @@ namespace Inforce.NET.Controllers
             _authService = authService;
         }
 
-        public IActionResult Index()
+        public IActionResult Index(int? id = null)
         {
+            ViewBag.Id = id;
             return View();
         }
 

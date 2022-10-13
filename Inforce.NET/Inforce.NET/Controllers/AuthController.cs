@@ -26,7 +26,7 @@ namespace Inforce.NET.Controllers
         {
             var user = await _authService.Login(credentials);
             if (user != null)
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("Index", "Home", new { id = user.Id });
             return RedirectToAction("LoginPage", new { isError = true });
         }
     }

@@ -1,4 +1,10 @@
 ﻿
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .user-not-found {
     margin-bottom: 5px;
 }
