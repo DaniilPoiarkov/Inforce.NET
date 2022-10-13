@@ -10,14 +10,8 @@ export class NotificationService {
     private toastr: ToastrService
   ) { }
 
-  positionClass = 'toast-top-right';
-  timeOut = 3000;
-
   public success(message: string): void {
-    this.toastr.success(message, '', { 
-      positionClass: this.positionClass,
-      timeOut: this.timeOut,
-    });
+    this.toastr.success(message);
   }
 
   public error(message: string): void {

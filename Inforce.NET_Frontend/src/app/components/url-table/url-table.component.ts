@@ -31,7 +31,8 @@ export class UrlTableComponent implements OnInit {
       .subscribe((resp) => {
         this.user = resp.body as UserModel;
         this.shortedUrls = this.user.ownedUrls;
-      }, () => {
+      }, (err) => {
+        this.notificationService.error(err.error);
         window.location.href = environment.apiUrl + '/Auth/LoginPage?isError=true';
       });
   }

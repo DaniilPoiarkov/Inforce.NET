@@ -26,7 +26,7 @@ export class HttpService {
   public getUserById(userId: number): Observable<HttpResponse<UserModel>> {
     return this.http.get<UserModel>
       (this.url + `/user/${userId}`, {observe: 'response', headers: this.headers });
-  } 
+  }  
 
   public saveNewUrl(model: NewUrl): Observable<HttpResponse<ShortedUrl>> {
     return this.http.post<ShortedUrl>(this.url, model, { observe: 'response', headers: this.headers });
