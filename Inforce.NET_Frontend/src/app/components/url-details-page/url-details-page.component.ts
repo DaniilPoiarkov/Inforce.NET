@@ -58,6 +58,11 @@ export class UrlDetailsPageComponent implements OnInit {
       }
     }, (err) => {
       this.notificationService.error(err.error);
+      this.router.navigate([`${this.shortedUrl.createdById}`]);
     });
+  }
+
+  backToTable(): void {
+    this.router.navigate([`${this.shortedUrl.createdById}`]);
   }
 }

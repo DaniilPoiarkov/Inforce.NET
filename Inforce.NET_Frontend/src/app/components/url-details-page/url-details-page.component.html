@@ -5,5 +5,8 @@
     <a class="url-dtl" (click)="navigateByUrl(false)">Short url: {{ shortedUrl.shortUrl }}</a>
     <a class="url-dtl" (click)="navigateByUrl(true)">Full url: {{ shortedUrl.url }}</a>
     <span class="url-dtl">Author full name: {{ user.fullName }}</span>
-    <app-button (isClicked)="deleteLink()" buttonName="Delete link"></app-button>
+    <div class="actions">
+        <app-button class="btn" (isClicked)="deleteLink()" buttonName="Delete link"></app-button>
+        <app-button class="btn" (isClicked)="backToTable()" buttonName="Back to table"></app-button>
+    </div>
 </div>
