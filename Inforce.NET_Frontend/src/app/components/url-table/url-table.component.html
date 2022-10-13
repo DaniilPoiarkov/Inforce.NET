@@ -1,0 +1,25 @@
+<header>
+    <ul class="hdr-opt">
+        <li class="nvg-opt">
+            <a href="https://localhost:7167/Home/Index?id={{ user?.id }}">Home</a>
+        </li>
+        <li class="nvg-opt">
+            <a href="https://localhost:7167/Home/About?id={{ user?.id }}">About</a>
+        </li>
+    </ul>
+</header>
+<div class="actions">
+    <h1 style="margin: auto">Hello, {{ user?.fullName ?? '' }}!</h1>
+    <div class="input">
+        <input type="text" [(ngModel)]="inputUrl">
+        <app-button buttonName="Add Url" (isClicked)="addUrl()"></app-button>
+    </div>
+</div>
+<div *ngIf="shortedUrls.length > 0" class="urls">
+    <div *ngFor="let url of shortedUrls" style="margin: 0 5px 0 5px;">
+        <app-url-view [url]="url"></app-url-view>
+    </div>
+</div>
+<div *ngIf="shortedUrls.length === 0">
+    <span>No urls yet. You can add new one!</span>
+</div>

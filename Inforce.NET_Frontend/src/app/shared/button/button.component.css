@@ -1,0 +1,23 @@
+.btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border: 1px solid rgb(159, 159, 159);
+    width: auto;
+    height: 35px;
+    border-radius: 15px;
+    height: 25px;
+}
+
+.redirect-button{
+    background-color: #fff;
+    font-size: 20px;
+    width: auto;
+    height: 45px;
+    border: 1px solid rgb(159, 159, 159);
+    border-radius: 15px;
+} :hover{
+    cursor: pointer;
+    background-color: rgb(238, 236, 236);
+}

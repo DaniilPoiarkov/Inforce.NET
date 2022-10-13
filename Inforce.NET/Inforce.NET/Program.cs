@@ -1,9 +1,14 @@
+using Inforce.NET;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.RegisterServices(builder.Configuration);
 
 var app = builder.Build();
+
+app.RegisterMiddlewares();
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
@@ -13,6 +18,14 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
+app.UseCors(opt =>
+{
+    opt
+    .AllowAnyHeader()
+    .AllowAnyMethod()
+    .AllowAnyOrigin();
+});
+
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
@@ -20,8 +33,13 @@ app.UseRouting();
 
 app.UseAuthorization();
 
+app.UseEndpoints(endpoints => 
+{
+    endpoints.MapControllers();
+});
+
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Auth}/{action=LoginPage}");
 
 app.Run();

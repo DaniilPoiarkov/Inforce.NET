@@ -13,8 +13,10 @@ namespace Inforce.NET.Common.DTOs
 
         public string? URL { get; set; }
 
+        public string? ShortUrl { get; set; }
+
         public DateTime CreatedDate { get; set; }
 
-        public User? CreatedBy { get; set; }
+        public int CreatedById { get; set; }
     }
 }

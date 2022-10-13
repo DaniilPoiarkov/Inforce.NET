@@ -1,0 +1,23 @@
+*{
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.url-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.url-dtl{
+    margin: 5px 5px 5px 5px;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+.actions{
+    display: flex;
+} .btn {
+    margin: 15px 10px 15px 10px;
+}

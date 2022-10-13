@@ -1,0 +1,49 @@
+
+*{
+    font-size: 18px;
+}
+
+header{
+    width: 100%;
+    height: 55px;
+    box-shadow: 0 0.25rem 0.75rem rgb(0 0 0 / 5%);
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.hdr-opt{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+}
+
+.nvg-opt > a {
+    color: #303639;
+    margin: 0 10px 0 10px;
+    text-decoration: none;
+}
+
+.urls{
+    margin: 10px 15px 10px 15px;
+    display: flex;
+    flex-direction: row;
+}
+
+.actions{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 25px 0 15px 0;
+}
+
+.input{
+    display: flex;
+}
+
+.input > input {
+    margin: 0 5px 0 5px;
+    border: 1px solid rgb(159, 159, 159);
+} :focus {
+    outline: 2px solid rgb(159, 159, 159);
+}

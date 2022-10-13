@@ -18,5 +18,7 @@ namespace Inforce.NET.Common.Entities
         public UserRole Role { get; set; }
 
         public string FullName { get; set; } = null!;
+
+        public List<ShortedUrl> OwnedUrls { get; set; } = new();
     }
 }
