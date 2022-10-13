@@ -1,6 +1,4 @@
-﻿using Inforce.NET.BLL;
-using Inforce.NET.BLL.Services;
-using Inforce.NET.Common.AuxiliaryModels;
+﻿using Inforce.NET.BLL.Interfaces;
 using Inforce.NET.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
@@ -9,10 +7,10 @@ namespace Inforce.NET.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly UserService _service;
-        private readonly AuthService _authService;
+        private readonly IUserService _service;
+        private readonly IAuthService _authService;
 
-        public HomeController(UserService service, AuthService authService)
+        public HomeController(IUserService service, IAuthService authService)
         {
             _service = service;
             _authService = authService;

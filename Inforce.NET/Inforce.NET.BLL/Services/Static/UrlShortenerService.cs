@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Inforce.NET.BLL.Services
+namespace Inforce.NET.BLL.Services.Static
 {
     public class UrlShortenerService
     {
@@ -32,7 +32,7 @@ namespace Inforce.NET.BLL.Services
 
             foreach (var c in s)
             {
-                i = (i * Base) + Chars.IndexOf(c);
+                i = i * Base + Chars.IndexOf(c);
             }
 
             return i;

@@ -1,19 +1,13 @@
 ﻿using AutoMapper;
+using Inforce.NET.BLL.Interfaces;
 using Inforce.NET.Common.AuxiliaryModels;
-using Inforce.NET.Common.AuxiliaryModels.Exceptions;
 using Inforce.NET.Common.DTOs;
-using Inforce.NET.Common.Entities;
 using Inforce.NET.DAL;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Inforce.NET.BLL.Services
 {
-    public class AuthService
+    public class AuthService : IAuthService
     {
         private readonly DatabaseContext _dbContext;
         private readonly IMapper _mapper;

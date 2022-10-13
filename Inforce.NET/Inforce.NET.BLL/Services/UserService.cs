@@ -1,15 +1,16 @@
 ﻿using AutoMapper;
+using Inforce.NET.BLL.Interfaces;
+using Inforce.NET.BLL.Services.Static;
 using Inforce.NET.Common.AuxiliaryModels;
 using Inforce.NET.Common.AuxiliaryModels.Exceptions;
 using Inforce.NET.Common.DTOs;
 using Inforce.NET.Common.Entities;
 using Inforce.NET.DAL;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace Inforce.NET.BLL.Services
 {
-    public class UserService
+    public class UserService : IUserService
     {
         private readonly DatabaseContext _dbContext;
         private readonly IMapper _mapper;

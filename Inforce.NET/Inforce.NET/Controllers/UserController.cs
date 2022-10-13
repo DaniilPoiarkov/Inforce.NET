@@ -1,8 +1,5 @@
-﻿using Inforce.NET.BLL;
-using Inforce.NET.BLL.Services;
+﻿using Inforce.NET.BLL.Interfaces;
 using Inforce.NET.Common.AuxiliaryModels;
-using Inforce.NET.Common.DTOs;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Inforce.NET.Controllers
@@ -11,9 +8,9 @@ namespace Inforce.NET.Controllers
     [ApiController]
     public class UserController : ControllerBase
     {
-        private readonly UserService _service;
+        private readonly IUserService _service;
 
-        public UserController(UserService service)
+        public UserController(IUserService service)
         {
             _service = service;
         }

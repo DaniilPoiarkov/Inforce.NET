@@ -1,4 +1,4 @@
-﻿using Inforce.NET.BLL;
+﻿using Inforce.NET.BLL.Interfaces;
 using Inforce.NET.BLL.MappingProfiles;
 using Inforce.NET.BLL.Services;
 using Inforce.NET.Common.AuxiliaryModels.Options;
@@ -22,8 +22,8 @@ namespace Inforce.NET
                 .ConfigureJwt(configuration);
 
             services
-                .AddTransient<AuthService>()
-                .AddTransient<UserService>();
+                .AddTransient<IAuthService, AuthService>()
+                .AddTransient<IUserService, UserService>();
         }
 
         public static void RegisterMiddlewares(this WebApplication app)
