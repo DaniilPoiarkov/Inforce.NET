@@ -20,8 +20,10 @@ namespace Inforce.NET
                 .ConnectDatabase(configuration)
                 .ConfigureJwt(configuration);
 
-            services.AddTransient<TestService>();
-            services.AddTransient<AuthService>();
+            services
+                .AddTransient<TestService>()
+                .AddTransient<AuthService>()
+                .AddTransient<UserService>();
         }
 
         public static void RegisterMiddlewares(this WebApplication app)
