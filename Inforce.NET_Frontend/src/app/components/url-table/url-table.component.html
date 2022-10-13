@@ -11,7 +11,7 @@
 <h1>Hello, {{ user?.fullName ?? "Anon" }}!</h1>
 <div *ngIf="shortedUrls.length > 0">
     <div *ngFor="let url of shortedUrls">
-        <span>{{ url.shortedUrl }}</span>
+        <app-url-view [url]="url"></app-url-view>
     </div>
 </div>
 <div *ngIf="shortedUrls.length === 0">

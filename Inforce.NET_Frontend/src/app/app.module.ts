@@ -7,12 +7,14 @@ import { AppComponent } from './app.component';
 import { UrlTableComponent } from './components/url-table/url-table.component';
 import { HttpService } from './services/http.service';
 import { UrlViewComponent } from './components/url-view/url-view.component';
+import { ButtonComponent } from './shared/button/button.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UrlTableComponent,
-    UrlViewComponent
+    UrlViewComponent,
+    ButtonComponent
   ],
   imports: [
     BrowserModule,

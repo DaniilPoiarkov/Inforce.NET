@@ -1,0 +1,9 @@
+.url-container{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+span {
+    margin: 0 10px 0 10px;
+}

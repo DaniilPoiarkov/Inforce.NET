@@ -25,6 +25,13 @@ export class UrlTableComponent implements OnInit {
       .subscribe((resp) => {
         this.user = resp.body as UserModel;
         this.shortedUrls = this.user.ownedUrls;
+        this.shortedUrls.push({
+          id: 1,
+          url: 'qwerty',
+          shortedUrl: 'qwe',
+          createdDate: new Date(),
+          createdBy: this.user
+        });
       });
   }
 }
