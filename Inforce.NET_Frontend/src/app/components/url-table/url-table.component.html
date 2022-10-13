@@ -1,9 +1,19 @@
-<p>Hello, {{ user?.fullName ?? "Anon" }}!</p>
-<div *ngIf="shortedUrls">
+<header>
+    <ul class="hdr-opt">
+        <li class="nvg-opt">
+            <a href="https://localhost:7167/Home/Index?id={{ user?.id }}">Home</a>
+        </li>
+        <li class="nvg-opt">
+            <a href="https://localhost:7167/Home/About?id={{ user?.id }}">About</a>
+        </li>
+    </ul>
+</header>
+<h1>Hello, {{ user?.fullName ?? "Anon" }}!</h1>
+<div *ngIf="shortedUrls.length > 0">
     <div *ngFor="let url of shortedUrls">
         <span>{{ url.shortedUrl }}</span>
     </div>
 </div>
-<div *ngIf="!shortedUrls">
+<div *ngIf="shortedUrls.length === 0">
     <span>No urls yet. You can add new one!</span>
 </div>

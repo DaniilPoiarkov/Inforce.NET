@@ -1,0 +1,25 @@
+
+*{
+    font-size: 18px;
+}
+
+header{
+    width: 100%;
+    height: 55px;
+    box-shadow: 0 0.25rem 0.75rem rgb(0 0 0 / 5%);
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.hdr-opt{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+}
+
+.nvg-opt > a {
+    color: #303639;
+    margin: 0 10px 0 10px;
+    text-decoration: none;
+}

@@ -24,8 +24,9 @@ namespace Inforce.NET.Controllers
             return View();
         }
 
-        public IActionResult About()
+        public IActionResult About(int? id = null)
         {
+            ViewBag.Id = id;
             return View();
         }
 

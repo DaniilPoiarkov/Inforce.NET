@@ -17,12 +17,10 @@ export class UrlTableComponent implements OnInit {
   ) { }
 
   public user?: UserModel;
-  public shortedUrls?: ShortedUrl[];
-  public id: number = 0;
+  public shortedUrls: ShortedUrl[] = [];
 
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id');
-    this.id = parseInt(id as string);
     this.httpService.getUserById(parseInt(id as string))
       .subscribe((resp) => {
         this.user = resp.body as UserModel;

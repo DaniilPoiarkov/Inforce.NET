@@ -6,11 +6,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UrlTableComponent } from './components/url-table/url-table.component';
 import { HttpService } from './services/http.service';
+import { UrlViewComponent } from './components/url-view/url-view.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    UrlTableComponent
+    UrlTableComponent,
+    UrlViewComponent
   ],
   imports: [
     BrowserModule,
