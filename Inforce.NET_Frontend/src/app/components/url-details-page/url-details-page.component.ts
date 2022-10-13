@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ShortedUrl } from 'src/app/models/shortedUrl';
 import { UserModel } from 'src/app/models/user';
 import { HttpService } from 'src/app/services/http.service';
@@ -16,6 +16,7 @@ export class UrlDetailsPageComponent implements OnInit {
     private route: ActivatedRoute,
     private notificationService: NotificationService,
     private httpService: HttpService,
+    private router: Router,
   ) { }
 
   public shortedUrl: ShortedUrl;
@@ -53,6 +54,7 @@ export class UrlDetailsPageComponent implements OnInit {
     this.httpService.deleteLink(this.shortedUrl.id).subscribe((resp) => {
       if(resp.ok){
         this.notificationService.success('Link deleted successfully');
+        this.router.navigate([`${this.shortedUrl.createdById}`]);
       }
     }, (err) => {
       this.notificationService.error(err.error);

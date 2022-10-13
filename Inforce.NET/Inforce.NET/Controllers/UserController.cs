@@ -52,5 +52,12 @@ namespace Inforce.NET.Controllers
             var url = await _service.GetLinkByTinyUrl(tinyUrl);
             return Ok(url);
         }
+
+        [HttpDelete("deleteLink/{id}")]
+        public async Task<IActionResult> DeleteLink(int id)
+        {
+            await _service.DeleteLink(id);
+            return NoContent();
+        }
     }
 }

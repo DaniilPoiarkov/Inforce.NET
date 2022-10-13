@@ -70,6 +70,17 @@ namespace Inforce.NET.BLL.Services
             return url;
         }
 
+        public async Task DeleteLink(int id)
+        {
+            var url = await _dbContext.ShortedUrls.FirstOrDefaultAsync(su => su.Id == id);
+
+            if (url == null)
+                throw new NotFoundException("Url");
+
+            _dbContext.ShortedUrls.Remove(url);
+            await _dbContext.SaveChangesAsync();
+        }
+
         private static string ShortenUrl(string url)
         {
             //TODO: replace localhost with real domain
