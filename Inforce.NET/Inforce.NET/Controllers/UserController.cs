@@ -9,11 +9,11 @@ namespace Inforce.NET.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class InfoController : ControllerBase
+    public class UserController : ControllerBase
     {
         private readonly UserService _service;
 
-        public InfoController(UserService service)
+        public UserController(UserService service)
         {
             _service = service;
         }
@@ -30,6 +30,13 @@ namespace Inforce.NET.Controllers
         {
             var urls = await _service.GetUrlsByUserId(userId);
             return Ok(urls);
+        }
+
+        [HttpGet("url/{id}")]
+        public async Task<IActionResult> GetLinkById(int id)
+        {
+            var url = await _service.GetUrlById(id);
+            return Ok(url);
         }
 
         [HttpPost]

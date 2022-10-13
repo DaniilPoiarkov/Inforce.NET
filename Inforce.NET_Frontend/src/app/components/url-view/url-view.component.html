@@ -1,4 +1,4 @@
 <div class="url-container">
-    <span>{{ url.shortUrl }}</span>
+    <span>{{ url.shortUrl | linkView }}</span>
     <app-button buttonName="Details" (isClicked)="openDetails()"></app-button>
 </div>

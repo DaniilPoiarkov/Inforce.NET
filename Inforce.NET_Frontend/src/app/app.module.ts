@@ -9,6 +9,9 @@ import { UrlTableComponent } from './components/url-table/url-table.component';
 import { HttpService } from './services/http.service';
 import { UrlViewComponent } from './components/url-view/url-view.component';
 import { ButtonComponent } from './shared/button/button.component';
+import { UrlRedirectPageComponent } from './components/url-redirect-page/url-redirect-page.component';
+import { UrlDetailsPageComponent } from './components/url-details-page/url-details-page.component';
+import { LinkViewPipe } from './pipes/link-view.pipe';
 
 @NgModule({
   declarations: [
@@ -16,6 +19,9 @@ import { ButtonComponent } from './shared/button/button.component';
     UrlTableComponent,
     UrlViewComponent,
     ButtonComponent,
+    UrlRedirectPageComponent,
+    UrlDetailsPageComponent,
+    LinkViewPipe,
   ],
   imports: [
     BrowserModule,

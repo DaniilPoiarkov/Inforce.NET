@@ -33,6 +33,10 @@ export class HttpService {
   }
 
   public getUrlByTinyLink(tinyUrl: string): Observable<HttpResponse<ShortedUrl>> {
-    return this.http.get<ShortedUrl>(this.url + '/' + tinyUrl, { observe: 'response', headers: this.headers });
+    return this.http.get<ShortedUrl>(this.url + '/tiny/' + tinyUrl, { observe: 'response', headers: this.headers });
+  }
+
+  public getUrlById(urlId: number): Observable<HttpResponse<ShortedUrl>> {
+    return this.http.get<ShortedUrl>(this.url + '/url/' + urlId, { observe: 'response', headers: this.headers });
   }
 }

@@ -4,6 +4,7 @@ using Inforce.NET.Common.AuxiliaryModels.Exceptions;
 using Inforce.NET.Common.DTOs;
 using Inforce.NET.Common.Entities;
 using Inforce.NET.DAL;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace Inforce.NET.BLL.Services
@@ -58,6 +59,12 @@ namespace Inforce.NET.BLL.Services
             if (url == null)
                 throw new NotFoundException("Url");
 
+            return url;
+        }
+
+        public async Task<ShortedUrlDto> GetUrlById(int id)
+        {
+            var url = _mapper.Map<ShortedUrlDto>(await _dbContext.ShortedUrls.FirstOrDefaultAsync(su => su.Id == id));
             return url;
         }
 
