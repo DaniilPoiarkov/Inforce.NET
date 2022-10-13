@@ -9,7 +9,7 @@
     </ul>
 </header>
 <div class="actions">
-    <h1>Hello, {{ user?.fullName ?? '' }}!</h1>
+    <h1 style="margin: auto auto">Hello, {{ user?.fullName ?? '' }}!</h1>
     <div class="input">
         <input type="text" [(ngModel)]="inputUrl">
         <app-button buttonName="Add Url" (isClicked)="addUrl()"></app-button>
