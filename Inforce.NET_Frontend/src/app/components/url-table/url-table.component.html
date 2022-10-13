@@ -10,7 +10,7 @@
 </header>
 <h1>Hello, {{ user?.fullName ?? "Anon" }}!</h1>
 <div *ngIf="shortedUrls.length > 0">
-    <div *ngFor="let url of shortedUrls">
+    <div *ngFor="let url of shortedUrls" class="urls">
         <app-url-view [url]="url"></app-url-view>
     </div>
 </div>

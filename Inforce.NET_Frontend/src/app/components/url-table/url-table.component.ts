@@ -32,6 +32,13 @@ export class UrlTableComponent implements OnInit {
           createdDate: new Date(),
           createdBy: this.user
         });
+        this.shortedUrls.push({
+          id: 2,
+          url: 'asdfgh',
+          shortedUrl: 'asd',
+          createdDate: new Date(),
+          createdBy: this.user
+        });
       });
   }
 }
