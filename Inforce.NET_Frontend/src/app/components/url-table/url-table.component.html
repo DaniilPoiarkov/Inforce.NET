@@ -8,9 +8,15 @@
         </li>
     </ul>
 </header>
-<h1>Hello, {{ user?.fullName ?? "Anon" }}!</h1>
-<div *ngIf="shortedUrls.length > 0">
-    <div *ngFor="let url of shortedUrls" class="urls">
+<div class="actions">
+    <h1>Hello, {{ user?.fullName ?? '' }}!</h1>
+    <div class="input">
+        <input type="text" name="inputUrl">
+        <app-button buttonName="Add Url" (isClicked)="addUrl()"></app-button>
+    </div>
+</div>
+<div *ngIf="shortedUrls.length > 0" class="urls">
+    <div *ngFor="let url of shortedUrls" style="margin: 0 5px 0 5px;">
         <app-url-view [url]="url"></app-url-view>
     </div>
 </div>

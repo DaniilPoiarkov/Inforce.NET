@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using Inforce.NET.Common.AuxiliaryModels.Exceptions;
+using Newtonsoft.Json;
 using System.Net;
 
 namespace Inforce.NET.Middlewares
@@ -22,6 +23,7 @@ namespace Inforce.NET.Middlewares
             {
                 var status = ex switch
                 {
+                    NotFoundException => HttpStatusCode.NotFound,
                     _ => HttpStatusCode.InternalServerError
                 };
 

@@ -14,12 +14,12 @@ import { ButtonComponent } from './shared/button/button.component';
     AppComponent,
     UrlTableComponent,
     UrlViewComponent,
-    ButtonComponent
+    ButtonComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [HttpService],
   bootstrap: [AppComponent]

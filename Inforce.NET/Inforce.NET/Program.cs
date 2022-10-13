@@ -8,7 +8,7 @@ builder.Services.RegisterServices(builder.Configuration);
 
 var app = builder.Build();
 
-//app.RegisterMiddlewares();
+app.RegisterMiddlewares();
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())

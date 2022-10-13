@@ -25,7 +25,24 @@ header{
 }
 
 .urls{
-    margin: 10px 0 10px 0;
+    margin: 10px 15px 10px 15px;
     display: flex;
     flex-direction: row;
+}
+
+.actions{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.input{
+    display: flex;
+}
+
+.input > input {
+    margin: 0 5px 0 5px;
+    border: 1px solid rgb(159, 159, 159);
+} :focus {
+    outline: 2px solid rgb(159, 159, 159);
 }
