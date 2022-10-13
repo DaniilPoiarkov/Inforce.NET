@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { ShortedUrl } from 'src/app/models/shortedUrl';
 import { UserModel } from 'src/app/models/user';
@@ -18,7 +17,6 @@ export class UrlTableComponent implements OnInit {
     private route: ActivatedRoute,
   ) { }
 
-  public inputControl: FormControl;
   public user?: UserModel;
   public shortedUrls: ShortedUrl[] = [];
   public inputUrl: string;
@@ -46,13 +44,6 @@ export class UrlTableComponent implements OnInit {
       }, () => {
         window.location.href = environment.apiUrl + '/Auth/LoginPage?isError=true';
       });
-      this.inputControl = new FormControl(this.inputUrl, [
-        Validators.required,
-      ]);
-  }
-
-  setInputValue(val: string): void {
-    this.inputUrl = val;
   }
 
   addUrl(): void {

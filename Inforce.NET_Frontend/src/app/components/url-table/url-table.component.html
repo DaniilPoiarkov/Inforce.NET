@@ -11,7 +11,7 @@
 <div class="actions">
     <h1>Hello, {{ user?.fullName ?? '' }}!</h1>
     <div class="input">
-        <input type="text" name="inputUrl">
+        <input type="text" [(ngModel)]="inputUrl">
         <app-button buttonName="Add Url" (isClicked)="addUrl()"></app-button>
     </div>
 </div>
