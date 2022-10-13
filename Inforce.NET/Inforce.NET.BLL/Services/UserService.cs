@@ -46,7 +46,7 @@ namespace Inforce.NET.BLL.Services
             var entity = _mapper.Map<ShortedUrl>(validModel);
 
             entity.CreatedDate = DateTime.UtcNow;
-            entity.ShortUrl = ShortenUrl(validModel.URL);
+            entity.ShortUrl = ShortenUrl(validModel.URL?? string.Empty);
 
             await _dbContext.ShortedUrls.AddAsync(entity);
             await _dbContext.SaveChangesAsync();
@@ -56,7 +56,7 @@ namespace Inforce.NET.BLL.Services
 
         public async Task<ShortedUrlDto> GetLinkByTinyUrl(string tinyUrl)
         {
-            var url = _mapper.Map<ShortedUrlDto>(await _dbContext.ShortedUrls.FirstOrDefaultAsync(su => su.ShortUrl == tinyUrl));
+            var url = _mapper.Map<ShortedUrlDto>(await _dbContext.ShortedUrls.FirstOrDefaultAsync(su => su.ShortUrl == "http://localhost:4200/tiny/" + tinyUrl));
 
             if (url == null)
                 throw new NotFoundException("Url");
