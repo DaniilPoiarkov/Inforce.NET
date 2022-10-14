@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32819.101
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inforce.NET", "Inforce.NET\Inforce.NET.csproj", "{874BF3EE-B4D0-45F8-A0FE-7A72EEF9CCF4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Inforce.NET", "Inforce.NET\Inforce.NET.csproj", "{874BF3EE-B4D0-45F8-A0FE-7A72EEF9CCF4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inforce.NET.BLL", "Inforce.NET.BLL\Inforce.NET.BLL.csproj", "{698D593A-0EC2-49DA-821D-73F3279C150C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Inforce.NET.BLL", "Inforce.NET.BLL\Inforce.NET.BLL.csproj", "{698D593A-0EC2-49DA-821D-73F3279C150C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inforce.NET.DAL", "Inforce.NET.DAL\Inforce.NET.DAL.csproj", "{6A8B4267-826B-4FD4-A30E-DA94127DCEDA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Inforce.NET.DAL", "Inforce.NET.DAL\Inforce.NET.DAL.csproj", "{6A8B4267-826B-4FD4-A30E-DA94127DCEDA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inforce.NET.Common", "Inforce.NET.Common\Inforce.NET.Common.csproj", "{33B28476-E35A-49EC-8351-A230BB048673}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Inforce.NET.Common", "Inforce.NET.Common\Inforce.NET.Common.csproj", "{33B28476-E35A-49EC-8351-A230BB048673}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inforce.NET.BLL.UnitTests", "Inforce.NET.BLL.UnitTests\Inforce.NET.BLL.UnitTests.csproj", "{F7D4FBA6-9DC4-4109-ADF9-D0310E622DFF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{33B28476-E35A-49EC-8351-A230BB048673}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{33B28476-E35A-49EC-8351-A230BB048673}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{33B28476-E35A-49EC-8351-A230BB048673}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7D4FBA6-9DC4-4109-ADF9-D0310E622DFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7D4FBA6-9DC4-4109-ADF9-D0310E622DFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7D4FBA6-9DC4-4109-ADF9-D0310E622DFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7D4FBA6-9DC4-4109-ADF9-D0310E622DFF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
