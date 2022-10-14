@@ -19,7 +19,6 @@ export class UrlRedirectPageComponent implements OnInit {
 
   ngOnInit(): void {
     const tinyUrl = this.route.snapshot.paramMap.get('tinyUrl');
-    console.log(tinyUrl);
     this.httpService.getUrlByTinyLink(tinyUrl as string)
     .subscribe((resp) => {
       this.url = resp.body as ShortedUrl;
