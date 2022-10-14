@@ -89,7 +89,7 @@ namespace Inforce.NET.BLL.Services
             return shortedUrl;
         }
 
-        private async Task<NewUrl> ValidateModel(NewUrl model)
+        public async Task<NewUrl> ValidateModel(NewUrl model)
         {
             if(string.IsNullOrEmpty(model.URL))
                 throw new InvalidValuesException("Invalid Url");
